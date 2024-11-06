@@ -1,0 +1,260 @@
+
+/* Nav Bar style */
+#nav{
+    background-color: blue;
+}
+#index_scroll{
+    height: 700px;
+}
+
+#img_1{
+    width: 351px;
+    height: 251px;
+    margin-left: 20px;
+}
+#img_2{
+    width: 351px;
+    height: 251px;
+    margin-left: 65px;
+    margin-top: 20px;
+}
+#img_3{
+    width: 351px;
+    height: 251px;
+    margin-left: 1096px;
+    margin-top: 260px;
+}
+#img_4{
+    width: 351px;
+    height: 251px;
+    margin-left: 1155px;
+    margin-top: -10px;
+}
+#bo_1{
+    background-image: url(../images/layer.png);
+    background-size: cover;
+}
+#footer{
+    color: white;
+    bottom: 0;
+    margin-top: 220px;
+    
+}
+#glass{
+    background: rgba(84, 26, 125, 0.5); /* Adjust transparency as needed */
+  color: #ffffff; /* This is white color for the text */
+  padding: 10px; /* Adjust padding as needed */ /* Full width */
+  width: 60%;
+  /* position: fixed; Keeps the navbar fixed at the top */
+  
+  z-index: 1000; /* Ensures the navbar is above other elements */
+}
+#glass_1{
+    background: rgba(26, 84, 179, 0.331); /* Adjust transparency as needed */
+  color: #ffffff; /* This is white color for the text */
+  padding: 10px; /* Adjust padding as needed */ /* Full width */
+  /* position: fixed; Keeps the navbar fixed at the top */
+  width: 90%;
+  z-index: 1000; /* Ensures the navbar is above other elements */
+}
+.tab{
+    background: rgba(84, 26, 125, 0.5);
+
+}
+#h1{
+    color: lightcoral;
+    
+}
+#p1{
+    font-size: 20px;
+}
+#bo_2{
+    background-image: url(../images/ngo.png);
+    background-size: cover;
+}
+#bo_3{
+    background-image: url(../images/who.png);
+}
+
+
+
+
+
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+#c1{
+    margin-top: -500px;
+}
+
+
+button{
+    all: unset;
+}
+
+#side{
+    border: 2px solid black ;
+}
+
+
+
+
+#form{
+    margin-left: 5px;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+input{
+    margin: 5px;
+    padding: 5px;
+}
+
+#sub{
+    
+    margin-left: 20%;
+}
+table{
+    border: 2px solid black;
+}
+
+#home{
+    background-image: url('../images/2.jpg');
+    background-size:cover; /* Preserve aspect ratio */
+    min-width: 100%; /* Ensure full width */
+    min-height: 100%;
+}
+
+#h{
+    color: aliceblue;
+}
+
+#back{
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+#para{
+    margin-top: 15px;
+    font-size: 22px;
+}
+
+#we{
+    margin-bottom: 35px;
+    font-size: 50px;
+}
+
+#k{
+    text-align: center;
+}
+
+#pic{
+    border: 2px solid black;
+    margin: 10px;
+    box-shadow:0px 0px 5px grey;
+}
+
+#info{
+    margin: auto;
+}
+
+/* {
+    box-shadow: 0px 0px 10px grey
+} */
+#footer_user{
+    color: black;
+}
+
+
+#logo{
+    height: 100px;
+    width: 100px;
+    margin-left: 25px;
+}
+
+#att{
+    padding: 10px;
+    
+
+}
+
+#header_ngo{
+    /* background-color:rgb(32, 95, 212); */
+    filter: blur();
+    background: linear-gradient(rgb(32, 95, 212));
+}
+
+
+#hover-container {
+    position: relative;
+}
+
+#hidden-content {
+    display: none; /* Initially hide the content */
+    position: absolute;
+    top: 100%; /* Position it below the text */
+    left: 0;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+#hover-text:hover + #hidden-content {
+    display: block; /* Show the content when hovering over the text */
+}
+
+#hidden-content.visible {
+    display: block; /* Keep the content visible */
+}
+
+
+/* Table Container */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+/* Table Header Styling */
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+/* Table Header Background */
+th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Table Row Hover Effect */
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Zebra Striping */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Responsive Table */
+@media (max-width: 600px) {
+    table {
+        font-size: 14px;
+    }
+}
+

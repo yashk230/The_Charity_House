@@ -1,0 +1,33 @@
+{% include "header.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make donation</title>
+</head>
+<body id="bo_1">
+    <div class="container">
+        <h1>List of all the NGO to make donations</h1>
+        <div class="col-12">
+            {% for ngo in ngo %}
+            
+            <div class="row mt-5">
+                <div class="col-4">
+                    <a href="/donate"><img src="{{ngo.n_id.pimage.url}}" height="222"
+                    class="card-img-top" alt="image" style="filter: drop-shadow(1px 1px 20px white);" ></a>
+                </div>
+                    <div class="col-6" style="margin-left: 20px;">
+                        <h3 class="card-title">{{ngo.n_id.name}}</h3>
+                        <br>
+                        <a href="/donate/{{ngo.n_id.id}}"><button class="btn btn-outline-warning">Make Donation</button></a>
+                    </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    
+</body>
+{% include "footer_user.html" %}
+</html>

@@ -1,0 +1,38 @@
+{% load static %}<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document | Donor Connected</title>
+</head>
+<body id="bo_2">
+    {% include "header.html" %}
+    <div class="container">
+        <h1> All donors connected will appear here</h1>
+        <div class="col-12">
+            <div class="row">
+                
+                    <table>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Address</th>
+                        </tr>
+                        {% for donor in donor %}
+                        <tr>
+                            <td>{{donor.name}}</td>
+                            <td>{{donor.email}}</td>
+                            <td>{{donor.phone}}</td>
+                            <td>{{donor.address}}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                
+            </div>
+        </div>
+    </div>
+    
+</body>
+{% include "footer.html" %}
+</html>

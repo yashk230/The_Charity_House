@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Ngo</title>
+</head>
+<body id="bo_1">
+    {% include "header.html" %}
+    <div class="container mt-2">
+        <h1 style="font-family: Bahnschrift Condensed;">Connect to new ngo</h1>
+        <div class="col-12">
+        <div class="row">
+            {% for ngo in ngo %}
+            <div class="col-md-4 mt-5">
+                    <div style="filter: drop-shadow(1px 1px 20px white);"><a href="/product"><img src="{{ngo.pimage.url}}" height="222"
+                        class="card-img-top" alt="Profile Pic" ></a></div>
+            </div>
+                <div class=" col-md-6 mt-5" style="width:100%;">
+                    <div class="card-body">
+                        <h3 class="card-title" style="color: whitesmoke;">Name: {{ngo.name}}</h3>
+                        <h5 class="card-text" style="color: whitesmoke;">Email:{{ngo.email}}</h5>
+                        <p class="card-text"  style="color: lightgreen;">Address: {{ngo.address}}</p>
+                        <p class="card-text"  style="color: lightgreen;">Category:{{ngo.category}}</p>
+                        <a href="/ngo_detail/{{ngo.id}}" class="btn btn-outline-warning">See details</a>
+                    </div>
+                    
+                    {% endfor %}
+                    
+
+                </div>
+                </div>
+        </div>
+    </div>
+</body>
+{% include "footer_user.html" %}
+</html>

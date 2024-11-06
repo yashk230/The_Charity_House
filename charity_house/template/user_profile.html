@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+    <link rel="stylesheet" href="asset/css/style.css">
+    
+</head>
+<body id="bo_1">
+    {% include "header.html" %}
+    <div class="container">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-md-5">
+                    <h3 style="font-family: Bahnschrift Condensed;">This is the previous data</h3>
+                    {% for donor in donor %}
+                        <p style="color:antiquewhite;" id="p1">Name:{{donor.name}}</p>
+                        <p style="color:antiquewhite;" id="p1">Email:{{donor.email}}</p>
+                        <p style="color:antiquewhite;" id="p1">Phone:{{donor.phone}}</p>
+                        <p style="color:antiquewhite;" id="p1">Address:{{donor.address}}</p>
+                    {% endfor %}
+                </div>
+
+                <div class="col-md-4">
+                    <form action="#" method="POST">
+                        {% csrf_token %}
+                        {% for x in donor %}
+                        
+                        {% if msg %}
+                        <div class="alert alert-sucess">
+                            {{msg}}
+                        </div>
+                        {% endif %}
+                        
+                        <h5><label for="name" style="font-family: Colonna MT;">Name:</label></h5>
+                        <input type="text" id="name" name="name" value="{{x.name}}" style="background-color:rgb(67, 123, 255);" pattern="[A-Za-z\s]+" required><br><br>
+        
+                       <h5> <label for="email" style="font-family: Colonna MT;">Email</label></h5>
+                        <input type="email" id="name" name="email" value="{{x.email}}" style="background-color:rgb(158, 97, 223);" ><br><br>
+                        
+                        <h5><label for="phone" style="font-family: Colonna MT;">Phone Number</label></h5>
+                        <input type="phone" id="phone" name="phone" value="{{x.phone}}" style="background-color:rgb(158, 97, 223);" pattern="\d{10}" required><br><br>
+
+                        <h5><label for="address" style="font-family: Colonna MT; color:whitesmoke">Address</label></h5>
+                        <input type="text" id="address" name="address" value="{{x.address}}" style="background-color:rgb(67, 123, 255);" required><br><br>
+                    
+                        
+                        {% endfor %}
+                        <input type="submit" value="Update" class="btn btn-outline-success">
+                    </form>
+
+                </div>
+
+                <div class="col-md-3">
+                    <h4>Update Password</h4>
+                    <form action="/update_pass/">
+                        {% csrf_token %}
+                        <label for="name">Current Password:</label>
+                        <input type="password" id="name" name="cpass" value="" style="background-color:rgb(67, 123, 255);"><br><br>
+        
+                        <label for="email">New Password</label>
+                        <input type="password" id="name" name="npass" value="" style="background-color:rgb(158, 97, 223);" ><br><br>
+                        <input type="submit" value="Update" class="btn btn-outline-danger">
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+    {% include "footer_user.html" %}
+</body>
+</html>

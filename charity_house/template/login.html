@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+    <link rel="stylesheet" href="asset/css/style.css">
+    
+</head>
+<body>
+  
+  {% include "header.html" %}
+
+    <div class="container">
+        <div class="row mt-5">
+        <div class="col-md-4 mx-auto mb-2 bg-success-subtle text-danger-emphasis mb-5 bg-body-tertiary rounded">
+            <h2>login From</h2>
+            <!-- uname,password conf password register -->
+            <form method="POST" action="#">
+              {% csrf_token %}
+                <strong><div class="mb-3">
+                  <label for="one" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="one" aria-placeholder="enter youe email" name='email'>
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="2" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="two" placeholder="enter your password" name='pass'>
+                </div>
+                <button type="submit" class="btn btn-danger">Login</button>
+                New user <a href="/register">register here / </a>
+                
+                      <a href="/fpass">Forgot Password??</a>
+                <br>
+                {% comment %} Login as <a href="/ngo_login">NGO</a> {% endcomment %}
+                {% if error %}
+                <div>
+                  <div>
+                    {{error}}
+                  </div>
+                {% endif %}
+              </div>
+              
+            </form>
+            
+        </div>
+        
+    </div>
+
+    </div>
+    
+    <script src="../static/js/bootstrap.min.js"> </script>
+    
+</body>
+
+{% include "footer.html" %}
+</html>

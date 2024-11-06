@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document | Dashboard User</title>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+  </head>
+
+  <body id="bo_1">
+    {% include "header.html" %}
+    <div class="container">
+      <h1 style="font-family: Bahnschrift Condensed;">User Account</h1>
+      <h4><a href="/user_profile"
+          class="link-offset-2 link-underline link-underline-opacity-0"
+          style="color: rgb(227, 74, 74);">Profile</a></h4>
+      <!-- <div class="col-12">
+        <div class="row">
+          <div class="col-md-10 mt-5" style="margin: 20px; padding:2px">
+            <div class="row mt-5" style="padding:2px"> -->
+      <div class="col-12" id="main">
+        <div class="card-box" id="glass">
+          <h4 style="color: whitesmoke;">Account Overview</h4>
+          <a
+            class="link-offset-2 link-underline link-underline-opacity-0"
+            href="/donations_made"
+            style="color: white;">Donations Made</a>
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          <a
+            class="link-offset-2 link-underline link-underline-opacity-0"
+            href="/ngos_connected" style="color: white;">Total
+            NGO's Connected</a>
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          <a
+            class="link-offset-2 link-underline link-underline-opacity-0"
+            href="/make_donations" style="color: white;">Make
+            New Donation</a>
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          <a
+            class="link-offset-2 link-underline link-underline-opacity-0"
+            href="/new_ngo" style="color: white;">Connect to new
+            NGO</a>
+          &nbsp;
+          &nbsp;
+          &nbsp;
+
+          <!-- <div class="row mt-5" id="att">
+                    
+                    <div class="card col-sm-6 col-lg-6 col-xl-3" id="att">
+                      <div class="card-box mb-0 widget-chart-two">
+                        <div class="float-right">
+                          {{count}}
+                        </div>
+                         <div class="widget-chart-two-content">
+                          <a
+                            class="link-offset-2 link-underline link-underline-opacity-0"
+                            href="/donations_made"
+                            style="color: black;">Donations Made</a>
+                        </div>
+                      </div>
+                     </div>
+                     
+
+
+                    <div class="card col-sm-6 col-lg-6 col-xl-3" id="att">
+                      <div class="card-box mb-0 widget-chart-two">
+                        <div class="float-right">
+                          {{a}}
+                        </div>
+                        <div class="widget-chart-two-content">
+                          <p class="text-muted mb-0 mt-2"><a
+                              class="link-offset-2 link-underline link-underline-opacity-0"
+                              href="/ngos_connected" style="color: black;">Total
+                              NGO's Connected</a> </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card col-sm-6 col-lg-6 col-xl-3" id="att">
+                      <div class="card-box mb-0 widget-chart-two">
+                        <div class="float-right">
+
+                        </div>
+                        <div class="widget-chart-two-content">
+                          <button class="text-muted mb-0 mt-2"><a
+                              class="link-offset-2 link-underline link-underline-opacity-0"
+                              href="/make_donations" style="color: black;">Make
+                              New Donation</a></button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card col-sm-6 col-lg-6 col-xl-3" id="att">
+                    <div class="card-box mb-0 widget-chart-two">
+                    <div class="float-right">
+                    {{y}}
+                    </div>
+                    <div class="widget-chart-two-content">
+                    <p class="text-muted mb-0 mt-2"><a
+                        class="link-offset-2 link-underline link-underline-opacity-0"
+                        href="/new_ngo" style="color: black;">Connect to new
+                        NGO</a></p>
+                    </div>
+                    </div>
+                    </div>
+                  </div> -->
+
+        </div>
+      </div>
+      <!-- </div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+    
+{% include "footer_user.html" %}
+  </body>
+</html>

@@ -1,0 +1,51 @@
+{% include "header.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="{% static "css/style.css" %}">
+    </head>
+    <body id="bo_1">
+            <div class="container">
+            <div class="col-12">
+                <div class="row">
+                    
+                    {% for ngo in ngo %}
+                    <h1>This is the page for ngo details</h1>
+                    <div class="col-md-4 mt-5">
+                        <div class="card" style="filter: drop-shadow(1px 1px 20px white);">
+                            <img src="{{ngo.pimage.url}}"
+                                height="222"
+                                class="card-img-top" alt="...">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mt-5">
+                        <div class="card-body">
+                            <h3 class="card-title" style="color: whitesmoke;">{{ngo.name}}</h3>
+                            <h5 class="card-text" style="color: whitesmoke;">Email:{{ngo.email}}</h5>
+                            <p class="card-text" style="color: lightgreen;">Address: {{ngo.address}}</p>
+                            <p class="card-text" style="color: lightgreen;">Category: {{ngo.category}}</p>
+                            
+                        </div>
+                    
+                        <button type="submit"
+                        class="btn btn-outline-warning mt-3" ><a href="/ngo_connect/{{ngo.id}}">Connect to NGO</a></button>
+
+                            <div>
+                                {% if error %}
+                                    <div class="alert alert-danger">
+                                        {{error}}
+                                    </div>
+                                {% endif %}
+                            </div>
+                    </div>
+            {% endfor %}
+            </div>
+        </div>
+    </body>
+    {% include "footer_user.html" %}
+</html>

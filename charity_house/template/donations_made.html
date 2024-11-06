@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document | Donations made</title>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    
+</head>
+<body id="bo_1">
+    {% include "header.html" %}
+    <div class="container mt-2">
+        <h1 style="font-family: Bahnschrift Condensed;" id="h1">All the donations made will appere here</h1>
+            <div class="col-12">
+               
+            
+            <div class="row mt-5" >
+                <!-- <div class="col-4" id="div"> -->
+                    <div class="col-12" id="hover-container">
+                        <div class="row">
+                            <h3 id="hover-text" style="color: whitesmoke;">This is for Money donations made</h3>
+                            <div class="col-6" id="hidden-content">
+                                <table id="" class="tab">
+                                    <tr>
+                                        <th>Amount in Rs</th>
+                                        <th>Date</th>
+                                    </tr>
+                                    {% for money in money %}
+                                    <tr>
+                                        <td>{{money.amount}}</td>
+                                        <td>{{money.created_at}}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                <!-- </div> -->
+
+
+                <!-- <div class="col-4" id="div"> -->
+                <div class="col-12" id="hover-container">
+                    <div class="row">
+                        <h3 id="hover-text" style="color: whitesmoke;">Donations of food items</h3>
+                            <div class="col-8" id="hidden-content" class="tab">
+                                <table id="food" class="tab">
+                                    <tr>
+                                        <th>Items</th>
+                                        <th>Place where item is made</th>
+                                        <th>Time when made</th>
+                                        <th>Servings</th>
+                                        <th>Approx Time of item expiry</th>
+                                        <th>Address</th>
+                                    </tr>
+                                    {% for food in food %}
+                                    <tr>
+                                        <td>{{food.Item}}</td>
+                                        <td>{{food.Place}}</td>
+                                        <td>{{food.Time}}</td>
+                                        <td>{{food.Serving}}</td>
+                                        <td>{{food.Expire}}</td>
+                                        <td>{{food.Address}}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </table>
+                            </div>
+                    </div>
+                </div>
+                <!-- </div> -->
+
+
+                <div class="col-12" id="hover-container">
+                    <div class="row">
+                        <h3 id="hover-text" style="color: whitesmoke;">Donations of Daily Essentials</h3>
+                        <div class="col-6" id="hidden-content">
+                                <table class="tab">
+                                    <tr>
+                                        <th>Types</th>
+                                        <th>Items</th>
+                                        <th>Address</th>
+                                    </tr>
+
+                                    {% for dailyy in daily %}
+                                    <tr>
+                                        <td>{{dailyy.type}}</td>
+                                        <td>{{dailyy.items}}</td>
+                                        <td>{{dailyy.Address}}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </table>
+                        
+                        </div>
+                        </div>
+                </div>
+            </div>
+
+
+    
+    </div>
+    
+</body>
+
+{% include "footer_user.html" %}
+</html>

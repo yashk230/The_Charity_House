@@ -1,0 +1,40 @@
+{% include "header.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ngo Connected</title>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+</head>
+<body id="bo_1">
+    <div class="container">
+        <h1 style="font-family: Bahnschrift Condensed;"> Connected Ngo</h1>
+        <div class="row">
+
+            {% if no %}
+                <div>
+                    <h3>{{ no }}</h1>
+                </div>
+            {% endif %}
+            {% for connect in connect %}
+            <div class="col-md-4">
+                <div class=" col-md-6 mt-3" style="width:100%;">
+                    <img src="{{connect.n_id.pimage.url}}" height="222"
+                    class="card-img-top" alt="image" style="filter: drop-shadow(1px 1px 20px white);" >
+                    <div class="card-body mt-4">
+                    <h3 class="card-title" style="color: whitesmoke;">{{connect.n_id.name}}</h3>
+                    <p class="card-text" style="color: lightgreen;">Address{{connect.n_id.address}}</p>
+                    <p class="card-text" style="color: lightgreen;">Category:{{connect.n_id.category}}</p>
+                    <p class="card-title" style="color: lightgreen;">{{connect.n_id.email}}</p>
+                   
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+{% include "footer_user.html" %}
+</html>

@@ -1,0 +1,73 @@
+{% include "header.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="bo_2">
+    <div class="container">
+        <h1>All the donations made will appear here</h1>
+        <div class="col-12">
+            <div class="row">
+                <!-- <div class="col-md-4">
+                    <h5>This part will contain money donation</h5>
+                </div> -->
+
+                <div class="col-md-8">
+                    <h5>This part will contain food</h5>
+                        <table>
+                            <tr>
+                                <th>Item</th>
+                                <th>Place Of making</th>
+                                <th>Time when made</th>
+                                <th>Serving per person</th>
+                                <th>Expires within(hrs)</th>
+                                <th>Address</th>
+                                <th>Donor</th>
+                            </tr>
+                            {% for f in f %}
+
+                                <tr>
+                                    <td>{{f.Item}}</td>
+                                    <td>{{f.Place}}</td>
+                                    <td>{{f.Time}}</td>
+                                    <td>{{f.Serving}}</td>
+                                    <td>{{f.Expire}}</td>
+                                    <td>{{f.Address}}</td>
+                                    <td>{{f.userid.email}}</td>
+                                </tr>
+                                {% endfor %}
+                            </table>
+
+                    <h5>This part will contain Daily Essentials</h5>
+                        <table>
+                            <tr>
+                                <th>Type</th>
+                                <th>Items</th>
+                                <th>Address</th>
+                                <th>Donor</th>
+                            </tr>
+
+                            {% for c in c %}
+                                <tr>
+                                    <td>{{c.type}}</td>
+                                    <td>{{c.items}}</td>
+                                    <td>{{c.Address}}</td>
+                                    <td>{{c.userid.email}}</td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+
+                <!-- <div class="col-md-4">
+                    <h5>This part will contain daily</h5>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</body>
+{% include "footer_user.html" %}
+</html>

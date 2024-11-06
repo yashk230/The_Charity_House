@@ -1,0 +1,46 @@
+{% include "header.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mt-5 mx-auto mb-2 bg-success-subtle text-danger-emphasis mb-5 bg-body-tertiary rounded">
+                <h2>This for NGO login only</h2>
+                <!-- uname,password conf password register -->
+                <form method="POST" action="#">
+                    {% csrf_token %}
+                    <strong>
+                        <div class="mb-3">
+                            <label for="one" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="one" placeholder="enter your email" name='email'>
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="2" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="two" placeholder="enter your password" name='pass'>
+                        </div>
+                    </strong>
+                    <button type="submit" class="btn btn-danger">Login</button>
+                    New user <a href="/register">register here</a>
+                    {% if error %}
+                <div>
+                    <div>
+                    {{error}}
+                    </div>
+                {% endif %}
+                </div>
+                </form>
+            
+            </div>
+        </div>
+    </div>
+    
+</body>
+{% include "footer.html" %}
+</html>

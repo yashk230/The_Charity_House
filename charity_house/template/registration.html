@@ -1,0 +1,127 @@
+{% include "header.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>VSMS Registration</title>
+    <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+    <link rel="stylesheet" href="asset/css/style.css">
+    
+</head>
+<body>
+  
+    <div class="container">
+        <div class="row mt-5">
+          
+
+          {% if donor == 1 %}
+        <div class="col-md-5 mx-auto bg-success-subtle text-success-emphasis mb-5 bg-body-tertiary rounded">
+            <h2>Registration Form for Donors</h2>
+            <!-- uname,password conf password register -->
+            <div>
+              {% if error_message %}
+                  <div class="alert alert-danger">
+                    {{error_message}}
+                  </div>
+                  
+              {% endif %}
+            </div>
+            <form method="POST" action="">
+                        {% csrf_token %}
+                <strong>
+                  <div class="mb-3">
+                    <label for="one" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="one" aria-placeholder="enter youe email" name="email">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="2" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="two" placeholder="enter your password" name="pass">
+                  </div>
+              
+                  <div class="mb-3">
+                    <label for="3" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="three" placeholder="enter your password again" name="cpass">
+                  </div>
+                </strong>
+                <button type="submit" class="btn btn-danger">Register</button>
+                <p>Have an Account? <a href="/login">Login</a></p>
+                
+              </form>
+              <div>
+                {% if Sucess %}
+                    <div class="alert alert-sucess">
+                      {{Sucess}}
+                    </div>
+                {% endif %}
+              </div>
+        
+        </div>
+        
+        {% elif donor == 2 %}
+        <div class="col-md-5 mx-auto bg-success-subtle text-success-emphasis mb-5 bg-body-tertiary rounded">
+          <h2>Registration Form for NGO's</h2>
+          <!-- uname,password conf password register -->
+          <div>
+            {% if error_message %}
+                <div class="alert alert-danger">
+                  {{error_message}}
+                </div>
+                
+            {% endif %}
+          </div>
+          <form method="POST" action="">
+            {% csrf_token %}
+              <strong>
+                <div class="mb-3">
+                  <label for="one" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="one" aria-placeholder="enter youe email" name="email">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="2" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="two" placeholder="enter your password" name="pass">
+                </div>
+            
+                <div class="mb-3">
+                  <label for="3" class="form-label">Confirm Password</label>
+                  <input type="password" class="form-control" id="three" placeholder="enter your password again" name="cpass">
+                </div>
+              </strong>
+              <button type="submit" class="btn btn-danger">Register</button>
+              <p>Have an Account? <a href="/ngo_login">Login</a></p>
+              
+            </form>
+            <div>
+              {% if Sucess %}
+                  <div class="alert alert-sucess">
+                    {{Sucess}}
+                  </div>
+              {% endif %}
+            </div>
+      
+      </div>
+
+      {% else %}
+      <div class="col-md-5 mx-auto bg-success-subtle text-success-emphasis mb-5 bg-body-tertiary rounded">
+        <div class="">
+          <h1>I want to Register as a <a href="/register/1">Donor</a> / <a href="/register/2">NGO</a> </h1>
+        </div>
+      </div>
+        {% endif %}
+        
+    </div>
+
+    </div>
+    
+    <script src="{% static 'js/bootstrap.min.js' %}"> </script>
+    
+</body>
+
+{% include "footer.html" %}
+</html>

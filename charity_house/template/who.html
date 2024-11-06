@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static "css/style.css" %}">
+        <title>Who are we</title>
+    </head>
+    <body id="bo_3">
+        {% include "header.html" %}
+        <div class="container">
+            <div class="col-12">
+                    <div class="row" id="back">
+                        <h1 id="we"><strong>WHO ARE WE</strong></h1>
+                        <h5>We are a place where donor finds place to help and
+                            NGO finds there help</h5>
+                        <p id="para">
+                            Welcome to our compassionate platform! 🌟 Here, we
+                            bridge hearts and causes, connecting those who care
+                            with meaningful ways to make a difference. Whether
+                            it's supporting elderly residents in <b>Old age homes</b>, empowering <b>Women and child welfare</b>,
+                            aiding victims of <b>Natural calamities</b>, or
+                            nurturing children in <b>Orphanages</b>, your
+                            generosity fuels hope and transforms lives. Join us
+                            in spreading kindness and creating a brighter
+                            tomorrow! 🤗🌼🙏<br>
+                            The Charity House is hoping to change a lot of peoples
+                        </p>
+                    </div>
+
+                    <div class="row" id="info">
+                        <div class="col-md-3" id="pic">
+                            <img src="{% static "images/oldage.jpeg" %}" alt="image">
+                            <h1>Vision</h1>
+                            <p style="font-size: 22px;">
+                                The only vision is to take care of all the needy people who all need help.
+                                There are lots of oldage homes, Orphanages. Our only vision is to help all these people
+                                find the help they want
+                            </p>
+                        </div>
+                        
+                        <div class="col-md-3" id="pic">
+                            <img src="{% static "images/oldage.jpeg" %}" alt="image">
+                            <h1>Mission</h1>
+                            <p style="font-size: 22px;">
+                                To prepare all the aspects of the socity that are in the need of help.
+
+                            </p>
+                        </div>
+
+                        <div class="col-md-3" id="pic">
+                            <img src="{% static "images/oldage.jpeg" %}" alt="image">
+                            <h1>Values</h1>
+                            <p style="font-size: 22px;">
+                                1. Accountability <br>
+                                2. Leadership <br>
+                                3.Transparency <br>
+                                4. Team Work <br>
+                                5. Innovation
+                            </p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        {% include "footer_user.html" %}
+    </body>
+</html>

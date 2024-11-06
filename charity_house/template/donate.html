@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document | Donate</title>
+</head>
+<body id="bo_1">
+    {% include "header.html" %}
+    <div class="container">
+        <h1>This is the page where the donations type will appear</h1>
+        <div class="col-12">
+            <div class="row">
+                <div class="">
+                    <h4><a href="/initiate-payment/{{nid}}">Donate Money</a></h4>
+                    <h4><a href="/daily_donate/{{nid}}">Donate Daily Essentials</a></h4>
+                    <h4><a href="/food_donate/{{nid}}">Donate Food Items</a></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+{% include "footer_user.html" %}
+</body>
+</html>
